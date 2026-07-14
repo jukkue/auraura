@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="stylesstoreau.css">
+    <title>Shop</title>
+</head>
+<body>
+    <div class="container">
+
+     <!-- Home Button for Shop View -->
+    <div id="homeButtonShop" class="nav-buttons">
+    <a href="contact.html" class="back-button" style="text-decoration:none;">← Back to Home</a>
+
+    <a href="tinaallstores.html" class="back-button" style="text-decoration:none;">← Back to Store</a>
+</div>
+
+        <!-- Main Shop View -->
+        <div id="shopView">
+            <h1>Spicie Fit</h1>
+
+            <!-- SHOP DIRECT LINKS, REPLACE 
+            NUMER WITH PRODUCT NUMBER-->
+      <!--  shop.html?product=3-->
+            
+            <div class="products-grid">
+                <!-- Product 1 -->
+                <div class="product-card" onclick="showProduct(1)">
+                    <div class="product-image"><img src="Images/STORE/redbikini.jpg" alt="photoset1" style="width: 100%; height: 100%; object-fit: cover;"></div>
+                    <div class="product-info">
+                        <div class="product-title">Red Hot Bikini</div>
+                        <!-- FULL description -->
+                        <div class="product-description" data-full="1 pcs. Red tiny bikini made of breathable stretchy fabric. This a comfortable bikini that highlights your gorgeous curves.">
+                            <!-- SHORT description -->
+                            1 pcs. Red tiny bikini made of breathable stretchy 
+                        </div>
+                        <div class="product-price">$50</div>
+                        <div class="product-buttons">
+                            <button class="btn btn-primary" onclick="event.stopPropagation(); goToPayment(1)">Buy Now</button>
+                            <button class="btn btn-secondary" onclick="event.stopPropagation(); showProduct(1)">Details</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="product-card" onclick="showProduct(2)">
+                    <div class="product-image"><img src="Images/STORE/blacksuit.jpg" alt="photoset1" style="width: 100%; height: 100%; object-fit: cover;"></div>
+                    <div class="product-info">
+                        <div class="product-title">Black Feels Bodysuit</div>
+                        <!-- FULL description -->
+                        <div class="product-description" data-full="1 pcs. Black bodysuit swimsuit, made of high quality stretchy fabric. The low cut design adds a bit of spice to your day.">
+                        <!-- SHORT description -->
+                            1 pcs. Black bodysuit swimsuit, made of high quality
+                        </div>
+                        <div class="product-price">$50</div>
+                        <div class="product-buttons">
+                            <button class="btn btn-primary" onclick="event.stopPropagation(); goToPayment(2)">Buy Now</button>
+                            <button class="btn btn-secondary" onclick="event.stopPropagation(); showProduct(2)">Details</button>
+                        </div>
+                    </div>
+                </div>
+
+                
+
+            </div>
+        </div>
+
+        <!-- Product Detail View -->
+        <div id="detailView" class="product-detail">
+            <div class="nav-buttons">
+    <a href="touch.html" class="back-button" style="text-decoration:none;">← Back to Home</a>
+    <button class="back-button" onclick="backToShop()">← Back to Store</button>
+</div>
+            
+            <div class="detail-container">
+                <div class="detail-content">
+                    <div class="detail-image" id="detailImage">Product Image</div>
+                    <div class="detail-info">
+                        <h2 id="detailTitle">Product Name</h2>
+                        <div class="detail-price" id="detailPrice">$0.00</div>
+                        <div class="detail-description" id="detailDescription">
+                            This is a full detailed description of the product. Here you can include all the important information about materials, sizing, care instructions, and what makes this product special. You can write as much as you need to fully describe the product and help customers make an informed decision.
+                        </div>
+                        <div class="detail-buttons">
+                            <a href="#" target="_blank" class="btn btn-primary" id="paymentLink" style="text-decoration: none; text-align: center; display: flex; align-items: center; justify-content: center;">Buy Now</a>
+                        </div>
+                        
+                        <!-- Reviews Section -->
+                        <div class="reviews-section" id="reviewsSection" style="display: none; margin-top: 40px; padding-top: 30px; border-top: 1px solid #ff6b9d;">
+                            <h3 style="color: #ffffff; font-size: 24px; text-align: center; margin-bottom: 30px; text-transform: uppercase; letter-spacing: 2px;">Customer Reviews</h3>
+                            <div class="review-container">
+                                <div class="review-image" id="reviewImage">[Review Photo 1]</div>
+                                <div class="review-nav">
+                                    <button class="review-arrow" id="prevReview" onclick="changeReview(-1)">←</button>
+                                    <span class="review-counter" id="reviewCounter">1 / 3</span>
+                                    <button class="review-arrow" id="nextReview" onclick="changeReview(1)">→</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                 </div>
+
+                <!-- You Might Also Like Section -->
+                
+
+
+
+                <div class="related-section">
+
+                    <h3>You Might Also Like</h3>
+
+                    <div class="related-products">
+
+                    <!-- First Related Product Card -->
+
+        <div class="related-card" onclick="showProduct(2)">
+
+      <div class="related-image">
+       <img src="Images/STORE/blacksuit.jpg" alt="photoset1" style="width: 100%; height: 100%; object-fit: cover;">
+           </div>
+                
+                <div class="related-info">
+
+       <div class="related-title">Black Feels Bodysuit
+       </div>
+                
+                <div class="related-price">$50</div>
+
+
+              </div>
+             </div>
+
+    <!-- Second Related Product Card -->
+
+            <div class="related-card" onclick="showProduct(1)">
+            
+            <div class="related-image">
+        <img src="Images/STORE/redbikini.jpg" alt="photoset1" style="width: 100%; height: 100%; object-fit: cover;">
+            </div>
+
+            <div class="related-info">
+
+            <div class="related-title">Red Hot Bikini</div>
+            <div class="related-price">$50</div>
+            </div>
+            </div>
+                    
+                    </div>
+                </div>
+            </div>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="social-icons">
+
+                <a href="https://www.youtube.com/@Spiciejulie" target="_blank" title="Youtube"><img src="Images/ICONS/UTUBE.png" width="40" height="30"></a>
+
+                <a href="www.instagram.com/spiciejuul" target="_blank" title="Instagram"><img src="Images/ICONS/IG.png" width="30" height="30"></a>
+
+                <a href="https://www.facebook.com/profile.php?id=61569468926514" target="_blank" title="Facebook"><img src="Images/ICONS/FB.png" width="30" height="30"></a>
+
+                <a href="https://www.patreon.com/lovejanea" target="_blank" title="Patreon"><img src="Images/ICONS/PATREON.png" width="30" height="30"></a>
+
+            <!--<a href="[TikTok URL]" target="_blank" title="TikTok">🎵</a>
+                -->
+
+            </div>
+
+            <div class="footer-divider"></div>
+            <div class="footer-links">
+                <a href="contact.html">Home</a>
+                <a href="contact.html">Contact</a>
+                <a href="tinareturns.html">Returns</a>
+                <a href="tinareturns.html">Terms of Service</a>
+                <a href="tinareturns.html">Privacy Policy</a>
+                <a href="tinareturns.html">Shipping</a>
+            </div>
+        </footer>
+
+        <!-- Copyright Footer -->
+        <div class="copyright-footer">
+            <p>2024-2026 All content on this website is protected by copyright laws. Reproduction and distribution of these images is prohibited. All rights reserved LoveAubria.</p>
+        </div>
+    </div>
+
+    <script>
+    const products = {
+        1: { 
+            paymentLink: 'https://youpay.me/spiciejuul/gift/1106088',
+            reviews: []
+        },
+        2: { 
+            paymentLink: 'https://youpay.me/spiciejuul/gift/1106088',
+            reviews: []
+        },
+        
+};
+    let currentProduct = null;
+    let currentReviewIndex = 0;
+
+    function goToPayment(productId) {
+        window.open(products[productId].paymentLink, '_blank');
+    }
+
+    function showProduct(id) {
+        currentProduct = id;
+        currentReviewIndex = 0;
+        const product = products[id];
+        
+        // Get info directly from the clicked product card
+    const productCards = document.querySelectorAll('.product-card');
+    const productCard = productCards[id - 1];
+    const title = productCard.querySelector('.product-title').textContent;
+    const price = productCard.querySelector('.product-price').textContent;
+    const descriptionEl = productCard.querySelector('.product-description');
+    const shortDesc = descriptionEl.textContent;
+    const fullDesc = descriptionEl.dataset.full || shortDesc;
+    
+    document.getElementById('detailTitle').textContent = title;
+    document.getElementById('detailPrice').textContent = price;
+    document.getElementById('detailDescription').textContent = fullDesc;
+    
+    // Update detail image - ADD THIS LINE
+    // Get the image from the clicked card
+const cardImage = productCard.querySelector('.product-image img').src;
+document.getElementById('detailImage').innerHTML = `<img src="${cardImage}" alt="${title}" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">`;
+    
+    // Update payment link
+    document.getElementById('paymentLink').href = product.paymentLink;
+    
+    // rest of the code...
+
+        
+        // Show or hide reviews section based on whether product has reviews
+        const reviewsSection = document.getElementById('reviewsSection');
+        if (product.reviews && product.reviews.length > 0) {
+            reviewsSection.style.display = 'block';
+            updateReviewDisplay();
+        } else {
+            reviewsSection.style.display = 'none';
+        }
+        
+        document.getElementById('shopView').style.display = 'none';
+        document.getElementById('detailView').classList.add('active');
+        
+document.getElementById('homeButtonShop').style.display = 'none';
+
+
+
+        window.scrollTo(0, 0);
+    }
+
+   function updateReviewDisplay() {
+    const product = products[currentProduct];
+    const reviewImage = document.getElementById('reviewImage');
+    const reviewCounter = document.getElementById('reviewCounter');
+    const prevBtn = document.getElementById('prevReview');
+    const nextBtn = document.getElementById('nextReview');
+    
+    // Display the image instead of text
+    reviewImage.innerHTML = `<img src="${product.reviews[currentReviewIndex]}" alt="Review ${currentReviewIndex + 1}" style="width: 60%; height: 60%; object-fit: cover; border-radius: 8px;">`;
+    reviewCounter.textContent = `${currentReviewIndex + 1} / ${product.reviews.length}`;
+    
+    prevBtn.disabled = currentReviewIndex === 0;
+    nextBtn.disabled = currentReviewIndex === product.reviews.length - 1;
+}
+
+    function changeReview(direction) {
+        const product = products[currentProduct];
+        currentReviewIndex += direction;
+        
+        if (currentReviewIndex < 0) currentReviewIndex = 0;
+        if (currentReviewIndex >= product.reviews.length) currentReviewIndex = product.reviews.length - 1;
+        
+        updateReviewDisplay();
+    }
+
+    function backToShop() {
+        document.getElementById('shopView').style.display = 'block';
+        document.getElementById('detailView').classList.remove('active');
+        
+
+document.getElementById('homeButtonShop').style.display = 'flex';
+
+
+        window.scrollTo(0, 0);
+
+        
+    }
+
+
+
+    window.addEventListener('DOMContentLoaded', () => {
+    const params = new URLSearchParams(window.location.search);
+    const productId = params.get('product');
+
+    if (productId && products[productId]) {
+        showProduct(Number(productId));
+    }
+});
+
+
+</script>
+</body>
+</html>
