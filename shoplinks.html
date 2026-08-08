@@ -5,150 +5,169 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Fit Kit — Gear Worth Sweating For</title>
 <style>
-  @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;1,500&family=Poppins:wght@300;400;500;600&display=swap');
 
   :root{
-    --ink:#12130f;
-    --paper:#f0efe4;
-    --lime:#ff8fc0;
-    --lime-deep:#e8489a;
-    --line:#12130f;
-    --muted:#5b5c50;
-    --card:#fbfaf2;
+    --ink:#4a3b45;
+    --paper:#fdf5f8;
+    --blush:#f6c9dd;
+    --rose:#e8608f;
+    --rose-deep:#d1477a;
+    --lavender:#e9def0;
+    --muted:#8c7684;
+    --card:#ffffff;
   }
 
-  html, body{
-    overflow-x:hidden;
-    max-width:100%;
-  }
-
+  html, body{ overflow-x:hidden; max-width:100%; }
   *{margin:0;padding:0;box-sizing:border-box;}
 
   body{
-    background:var(--paper);
+    background:
+      radial-gradient(circle at 10% 5%, var(--blush) 0%, transparent 35%),
+      radial-gradient(circle at 90% 15%, var(--lavender) 0%, transparent 40%),
+      var(--paper);
     color:var(--ink);
-    font-family:'Space Grotesk',sans-serif;
+    font-family:'Poppins',sans-serif;
     -webkit-font-smoothing:antialiased;
   }
 
   header{
-    padding:28px 6vw 22px;
+    padding:32px 6vw 20px;
     display:flex;
     justify-content:space-between;
-    align-items:flex-end;
-    border-bottom:3px solid var(--line);
+    align-items:center;
   }
 
   .brand{
-    font-family:'Archivo Black',sans-serif;
-    font-size:clamp(28px,4vw,42px);
-    letter-spacing:-0.02em;
-    line-height:0.9;
+    font-family:'Playfair Display',serif;
+    font-style:italic;
+    font-weight:600;
+    font-size:clamp(30px,5vw,42px);
+    color:var(--rose-deep);
+    letter-spacing:0.01em;
   }
 
-  .brand span{color:var(--lime-deep); -webkit-text-stroke:1.5px var(--ink);}
+  .brand::after{
+    content:" 🌸";
+    font-style:normal;
+  }
 
   .tag{
-    font-family:'JetBrains Mono',monospace;
-    font-size:12px;
+    font-size:18px;
+    letter-spacing:0.1em;
     color:var(--muted);
     text-align:right;
-    max-width:220px;
+    text-transform:uppercase;
+    font-weight:500;
   }
 
   .hero{
-    padding:60px 6vw 50px;
-    border-bottom:3px solid var(--line);
+    padding:40px 6vw 60px;
+    text-align:center;
     position:relative;
-    overflow:hidden;
   }
 
   .hero h1{
-    font-family:'Archivo Black',sans-serif;
-    font-size:clamp(36px,7vw,84px);
-    line-height:0.92;
-    letter-spacing:-0.02em;
-    max-width:16ch;
+    font-family:'Playfair Display',serif;
+    font-weight:600;
+    font-size:clamp(38px,7vw,66px);
+    line-height:1.15;
+    max-width:18ch;
+    margin:0 auto;
+    color:var(--ink);
   }
 
   .hero h1 em{
-    font-style:normal;
-    background:var(--lime);
-    padding:0 10px;
-    display:inline-block;
-    transform:rotate(-1deg);
+    font-style:italic;
+    color:var(--rose);
   }
 
   .hero p{
-    font-family:'JetBrains Mono',monospace;
-    font-size:14px;
+    font-size:20px;
     color:var(--muted);
-    margin-top:22px;
-    max-width:46ch;
+    margin:18px auto 0;
+    max-width:44ch;
+    line-height:1.6;
   }
 
   .disclosure{
-    font-family:'JetBrains Mono',monospace;
-    font-size:11px;
+    font-size:17px;
     color:var(--muted);
     background:var(--card);
-    border:1px solid var(--line);
-    padding:10px 14px;
-    margin-top:26px;
+    border:1px solid var(--blush);
+    border-radius:999px;
+    padding:11px 20px;
+    margin-top:24px;
     display:inline-block;
+    box-shadow:0 4px 14px rgba(232,96,143,0.08);
   }
 
-  main{padding:50px 6vw 90px;}
+  .divider{
+    display:block;
+    width:100%;
+    height:40px;
+    margin-top:-4px;
+  }
+
+  main{padding:20px 6vw 90px; max-width:1200px; margin:0 auto;}
 
   .grid{
     display:grid;
-    grid-template-columns:repeat(auto-fill,minmax(280px,1fr));
-    gap:34px;
+    grid-template-columns:repeat(auto-fill,minmax(270px,1fr));
+    gap:32px;
   }
 
   .card{
     background:var(--card);
-    border:3px solid var(--line);
+    border-radius:28px;
     display:flex;
     flex-direction:column;
     position:relative;
-    transition:transform .18s ease, box-shadow .18s ease;
+    overflow:hidden;
+    box-shadow:0 8px 24px rgba(200,140,170,0.16);
+    transition:transform .25s ease, box-shadow .25s ease;
   }
 
   .card:hover{
-    transform:translate(-4px,-4px);
-    box-shadow:8px 8px 0 var(--ink);
+    transform:translateY(-6px);
+    box-shadow:0 16px 32px rgba(200,140,170,0.26);
   }
 
   .card-media{
     aspect-ratio:1/1;
-    border-bottom:3px solid var(--line);
     overflow:hidden;
-    background:#fff;
+    background:linear-gradient(135deg,#fff0f6,#f3ecf9);
     position:relative;
   }
 
   .card-media img{
     width:100%;
     height:100%;
-    object-fit:cover;
+    object-fit:contain;
     display:block;
+    transition:transform .4s ease;
+  }
+
+  .card:hover .card-media img{
+    transform:scale(1.05);
   }
 
   .price-tag{
     position:absolute;
     top:14px;
     right:14px;
-    background:var(--lime);
-    border:2px solid var(--ink);
-    font-family:'Archivo Black',sans-serif;
-    font-size:18px;
-    padding:6px 10px;
-    transform:rotate(3deg);
+    background:var(--rose);
+    color:#fff;
+    border-radius:999px;
+    font-family:'Poppins',sans-serif;
+    font-weight:600;
+    font-size:19px;
+    padding:8px 16px;
+    box-shadow:0 4px 10px rgba(209,71,122,0.35);
   }
 
   .card-body{
-    padding:20px 20px 22px;
+    padding:22px 22px 24px;
     display:flex;
     flex-direction:column;
     gap:10px;
@@ -156,76 +175,93 @@
   }
 
   .card-body h3{
-    font-size:19px;
-    font-weight:700;
-    line-height:1.25;
+    font-family:'Playfair Display',serif;
+    font-weight:600;
+    font-size:26px;
+    line-height:1.3;
+    color:var(--ink);
   }
 
   .note{
-    font-family:'JetBrains Mono',monospace;
-    font-size:12px;
-    color:var(--muted);
-    line-height:1.5;
-    border-left:2px solid var(--lime-deep);
-    padding-left:10px;
+    font-size:17px;
+    color:#a13a15;
+    line-height:1.6;
+    background:#fff2e0;
+    border:1.5px solid #f0b088;
+    border-radius:14px;
+    padding:12px 14px;
+    font-weight:600;
+    display:flex;
+    align-items:flex-start;
+    gap:8px;
   }
 
-  .buy-btn{
-    margin-top:auto;
-    padding-top:14px;
+  .note::before{
+    content:"⚠️";
+    font-size:18px;
+    flex-shrink:0;
   }
+
+  .buy-btn{ margin-top:auto; padding-top:14px; }
 
   .buy-btn a{
     display:block;
     text-align:center;
-    background:var(--ink);
-    color:var(--paper);
-    font-family:'JetBrains Mono',monospace;
-    font-weight:500;
-    font-size:13px;
-    letter-spacing:0.04em;
+    background:linear-gradient(135deg,var(--rose),var(--rose-deep));
+    color:#fff;
+    font-weight:600;
+    font-size:18px;
+    letter-spacing:0.02em;
     text-decoration:none;
-    padding:13px;
-    border:2px solid var(--ink);
-    transition:background .15s ease, color .15s ease;
+    padding:15px;
+    border-radius:999px;
+    box-shadow:0 6px 16px rgba(209,71,122,0.3);
+    transition:transform .18s ease, box-shadow .18s ease;
   }
 
   .buy-btn a:hover{
-    background:var(--lime);
-    color:var(--ink);
+    transform:translateY(-2px);
+    box-shadow:0 10px 22px rgba(209,71,122,0.4);
   }
 
   .buy-btn a:focus-visible, a:focus-visible{
-    outline:3px solid var(--ink);
+    outline:3px solid var(--rose-deep);
     outline-offset:2px;
   }
 
   footer{
-    padding:28px 6vw 40px;
-    border-top:3px solid var(--line);
-    font-family:'JetBrains Mono',monospace;
-    font-size:11px;
+    padding:30px 6vw 40px;
+    text-align:center;
+    font-size:17px;
     color:var(--muted);
+    border-top:1px solid var(--blush);
   }
 
   @media (max-width:600px){
-    header{flex-direction:column;align-items:flex-start;gap:14px;}
+    header{flex-direction:column;align-items:flex-start;gap:10px;}
     .tag{text-align:left;}
+    .hero{text-align:left;}
+    .hero h1{margin:0;}
+    .disclosure{display:block; width:fit-content;}
   }
 </style>
 </head>
 <body>
 
 <header>
-  <div class="brand">FIT<br><span>KIT</span></div>
-  <div class="tag">HAND-PICKED FITNESS GEAR<br>NO FLUFF, JUST WHAT WORKS</div>
+  <div class="brand">fit kit</div>
+  <div class="tag">Yoga &amp; Flow Essentials</div>
 </header>
 
 <section class="hero">
-  <h1>Gear I actually <em>train in</em>.</h1>
-  <p>Every item below is something worth adding to your rotation. Tap through to Amazon to check sizing, reviews, and grab it.</p>
-  <div class="disclosure">AS AN AMAZON ASSOCIATE, I EARN FROM QUALIFYING PURCHASES.</div>
+  <h1>Gear that moves <em>with</em> me.</h1>
+  <p>Soft, breathable, and stretchy enough for every pose. Here are the pieces I keep coming back to — tap through to grab them on Amazon.</p>
+  <div class="disclosure">As an Amazon Associate, I earn from qualifying purchases 🤍</div>
 </section>
+
+<svg class="divider" viewBox="0 0 1440 40" preserveAspectRatio="none">
+  <path d="M0,20 C240,40 480,0 720,20 C960,40 1200,0 1440,20 L1440,40 L0,40 Z" fill="#f6c9dd" opacity="0.35"/>
+</svg>
 
 <main>
   <div class="grid">
@@ -239,7 +275,7 @@
         <h3>High Waisted Pink Yoga Leggings</h3>
         <p class="note">Note: thin material — wear dark-colored underwear.</p>
         <div class="buy-btn">
-          <a href="https://www.amazon.com/dp/B0CLNL919K?tag=sweethesthomOc-20" target="_blank" rel="noopener sponsored">View on Amazon →</a>
+          <a href="https://www.amazon.com/dp/B0CLNL919K?tag=sweethesthomOc-20" target="_blank" rel="noopener sponsored">Shop on Amazon →</a>
         </div>
       </div>
     </div>
@@ -253,7 +289,7 @@
         <h3>High Waisted White Yoga Leggings</h3>
         <p class="note">Note: thin material — wear dark-colored underwear.</p>
         <div class="buy-btn">
-          <a href="https://www.amazon.com/dp/B0D9PY8W8H?tag=sweethesthomOc-20" target="_blank" rel="noopener sponsored">View on Amazon →</a>
+          <a href="https://www.amazon.com/dp/B0D9PY8W8H?tag=sweethesthomOc-20" target="_blank" rel="noopener sponsored">Shop on Amazon →</a>
         </div>
       </div>
     </div>
