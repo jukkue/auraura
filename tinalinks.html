@@ -111,6 +111,27 @@ Or just repeat your text within one span to make it longer! That's easier */
         
 <div class="space-y-3">
 
+
+<!-- Stores Category -->
+
+    <div>
+
+    <button onclick="handleLinkClick('stores', 'spicieintro.html')" 
+    class="w-full bg-gradient-to-r from-purple-50 to-pink-50 border-2 border-purple-200 text-gray-800 py-4 px-6 rounded-2xl font-semibold flex items-center justify-between">
+ <span class="flex items-center gap-3">
+ <svg class="w-5 h-5 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+ <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"></path>
+ </svg>
+    SENSUAL DEMAND
+    </span>
+    <svg class="w-5 h-5 text-purple-400 group-hover:text-purple-600 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+    </svg>
+    </button>
+    
+
+    </div>
+    
     
 
 <!-- CONTRIBUTION Category -->
@@ -170,48 +191,7 @@ Or just repeat your text within one span to make it longer! That's easier */
     </div>
     </div>
 
-<!-- GAMING Category -->
 
-<div>
-
- <button onclick="toggleCategory('gaming')" class="w-full bg-gradient-to-r from-purple-50 to-pink-50 border-2 border-purple-200 text-gray-800 py-4 px-6 rounded-2xl font-semibold flex items-center justify-between">
- <span class="flex items-center gap-3">
- <svg class="w-5 h-5 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
- <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"></path>
- </svg>
- GAMING
- </span>
- <svg id="chevron-live" class="chevron w-5 h-5 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
- <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
- </svg>
- </button>
- <div id="category-gaming" class="category-content mt-2 space-y-2">
-
- <button onclick="handleLinkClick('TWITCH', 'https://m.twitch.tv/bellelione')" class="link-button w-full bg-white text-gray-800 py-3 px-6 rounded-xl font-medium hover:shadow-lg flex items-center justify-between group ml-4">
-    <span>TWITCH</span>
-    <svg class="w-4 h-4 text-purple-400 group-hover:text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
-    </svg>
-    </button>
-<!--
-    <button onclick="handleLinkClick(' DONATE', 'https://streamlabs.com/bellelione/tip')" class="link-button w-full bg-white text-gray-800 py-3 px-6 rounded-xl font-medium hover:shadow-lg flex items-center justify-between group ml-4">
-    <span>STREAM TRIBUTE</span>
-    <svg class="w-4 h-4 text-purple-400 group-hover:text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
-    </svg>
-    </button>
-    -->
-
-    <button onclick="handleLinkClick(' YOUTUBE', 'https://www.youtube.com/@Bellaurasmr/videos')" class="link-button w-full bg-white text-gray-800 py-3 px-6 rounded-xl font-medium hover:shadow-lg flex items-center justify-between group ml-4">
-    <span>YOUTUBE</span>
-    <svg class="w-4 h-4 text-purple-400 group-hover:text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
-    </svg>
-    </button>
-
-
-    </div>
-    </div>
 
     <!-- BOOK Category -->
     <div>
@@ -230,32 +210,26 @@ Or just repeat your text within one span to make it longer! That's easier */
 
     </div>
 
-    <!-- PODCAST Category -->
+    
 
-<div>
- <button onclick="toggleCategory('PODCAST')" class="w-full bg-gradient-to-r from-purple-50 to-pink-50 border-2 border-purple-200 text-gray-800 py-4 px-6 rounded-2xl font-semibold flex items-center justify-between">
- <span class="flex items-center gap-3">
- <svg class="w-5 h-5 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <!-- GAMING & SOCIALS Category -->
+    
+    <div>
 
- <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18.75a6 6 0 0 0 6-6v-1.5m-6 7.5a6 6 0 0 1-6-6v-1.5m6 7.5v3.75m-3.75 0h7.5M12 15.75a3 3 0 0 1-3-3V4.5a3 3 0 1 1 6 0v8.25a3 3 0 0 1-3 3Z" /></path>
- </svg>
- PODCAST
+ <button onclick="toggleCategory('gaming')" 
+class="w-full bg-gradient-to-r from-purple-50 to-pink-50 border-2 border-purple-200 text-gray-800 py-4 px-6 rounded-2xl font-semibold flex items-center justify-between">
+    <span class="flex items-center gap-3">
+    <svg class="w-5 h-5 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21.721 12.752a9.711 9.711 0 0 0-.945-5.003 12.754 12.754 0 0 1-4.339 2.708 18.991 18.991 0 0 1-.214 4.772 17.165 17.165 0 0 0 5.498-2.477ZM14.634 15.55a17.324 17.324 0 0 0 .332-4.647c-.952.227-1.945.347-2.966.347-1.021 0-2.014-.12-2.966-.347a17.515 17.515 0 0 0 .332 4.647 17.385 17.385 0 0 0 5.268 0ZM9.772 17.119a18.963 18.963 0 0 0 4.456 0A17.182 17.182 0 0 1 12 21.724a17.18 17.18 0 0 1-2.228-4.605ZM7.777 15.23a18.87 18.87 0 0 1-.214-4.774 12.753 12.753 0 0 1-4.34-2.708 9.711 9.711 0 0 0-.944 5.004 17.165 17.165 0 0 0 5.498 2.477ZM21.356 14.752a9.765 9.765 0 0 1-7.478 6.817 18.64 18.64 0 0 0 1.988-4.718 18.627 18.627 0 0 0 5.49-2.098ZM2.644 14.752c1.682.971 3.53 1.688 5.49 2.099a18.64 18.64 0 0 0 1.988 4.718 9.765 9.765 0 0 1-7.478-6.816ZM13.878 2.43a9.755 9.755 0 0 1 6.116 3.986 11.267 11.267 0 0 1-3.746 2.504 18.63 18.63 0 0 0-2.37-6.49ZM12 2.276a17.152 17.152 0 0 1 2.805 7.121c-.897.23-1.837.353-2.805.353-.968 0-1.908-.122-2.805-.353A17.151 17.151 0 0 1 12 2.276ZM10.122 2.43a18.629 18.629 0 0 0-2.37 6.49 11.266 11.266 0 0 1-3.746-2.504 9.754 9.754 0 0 1 6.116-3.985Z"></path>
+    </svg>
+
+ GAMING & SOCIALS
  </span>
  <svg id="chevron-live" class="chevron w-5 h-5 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
  </svg>
  </button>
-
-
-<div id="category-PODCAST" class="category-content mt-2 space-y-2">
-
- <button onclick="handleLinkClick('RSS','https://rss.com/podcasts/gentle-heart')" class="link-button w-full bg-white text-gray-800 py-3 px-6 rounded-xl font-medium hover:shadow-lg flex items-center justify-between group ml-4">
-    <span>RSS PODCAST</span>
-    <svg class="w-4 h-4 text-purple-400 group-hover:text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
-    </svg>
-    </button>
-
+ <div id="category-gaming" class="category-content mt-2 space-y-2">
 
  <button onclick="handleLinkClick('TWITCH', 'https://m.twitch.tv/bellelione')" class="link-button w-full bg-white text-gray-800 py-3 px-6 rounded-xl font-medium hover:shadow-lg flex items-center justify-between group ml-4">
     <span>TWITCH</span>
@@ -263,50 +237,7 @@ Or just repeat your text within one span to make it longer! That's easier */
     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
     </svg>
     </button>
-<!--
-    <button onclick="handleLinkClick(' DONATE', 'https://streamlabs.com/bellelione/tip')" class="link-button w-full bg-white text-gray-800 py-3 px-6 rounded-xl font-medium hover:shadow-lg flex items-center justify-between group ml-4">
-    <span>STREAM TRIBUTE</span>
-    <svg class="w-4 h-4 text-purple-400 group-hover:text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
-    </svg>
-    </button>
-    -->
 
-    <button onclick="handleLinkClick(' YOUTUBE', 'https://www.youtube.com/@Bellaurasmr/videos')" class="link-button w-full bg-white text-gray-800 py-3 px-6 rounded-xl font-medium hover:shadow-lg flex items-center justify-between group ml-4">
-    <span>YOUTUBE</span>
-    <svg class="w-4 h-4 text-purple-400 group-hover:text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
-    </svg>
-    </button>
-
-
-    </div>
-    </div>
-
-    <!-- SOCIALS Category -->
-    <div>
-
-    <button onclick="toggleCategory('SOCIAL')" class="w-full bg-gradient-to-r from-purple-50 to-pink-50 border-2 border-purple-200 text-gray-800 py-4 px-6 rounded-2xl font-semibold flex items-center justify-between">
-    <span class="flex items-center gap-3">
-    <svg class="w-5 h-5 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21.721 12.752a9.711 9.711 0 0 0-.945-5.003 12.754 12.754 0 0 1-4.339 2.708 18.991 18.991 0 0 1-.214 4.772 17.165 17.165 0 0 0 5.498-2.477ZM14.634 15.55a17.324 17.324 0 0 0 .332-4.647c-.952.227-1.945.347-2.966.347-1.021 0-2.014-.12-2.966-.347a17.515 17.515 0 0 0 .332 4.647 17.385 17.385 0 0 0 5.268 0ZM9.772 17.119a18.963 18.963 0 0 0 4.456 0A17.182 17.182 0 0 1 12 21.724a17.18 17.18 0 0 1-2.228-4.605ZM7.777 15.23a18.87 18.87 0 0 1-.214-4.774 12.753 12.753 0 0 1-4.34-2.708 9.711 9.711 0 0 0-.944 5.004 17.165 17.165 0 0 0 5.498 2.477ZM21.356 14.752a9.765 9.765 0 0 1-7.478 6.817 18.64 18.64 0 0 0 1.988-4.718 18.627 18.627 0 0 0 5.49-2.098ZM2.644 14.752c1.682.971 3.53 1.688 5.49 2.099a18.64 18.64 0 0 0 1.988 4.718 9.765 9.765 0 0 1-7.478-6.816ZM13.878 2.43a9.755 9.755 0 0 1 6.116 3.986 11.267 11.267 0 0 1-3.746 2.504 18.63 18.63 0 0 0-2.37-6.49ZM12 2.276a17.152 17.152 0 0 1 2.805 7.121c-.897.23-1.837.353-2.805.353-.968 0-1.908-.122-2.805-.353A17.151 17.151 0 0 1 12 2.276ZM10.122 2.43a18.629 18.629 0 0 0-2.37 6.49 11.266 11.266 0 0 1-3.746-2.504 9.754 9.754 0 0 1 6.116-3.985Z"></path>
-    </svg>
-    SOCIALS
-    </span>
-
-    <svg id="chevron-toy" class="chevron w-5 h-5 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-    </svg>
-    </button>
-
-    <div id="category-SOCIAL" class="category-content mt-2 space-y-2">
-
-    <button onclick="handleLinkClick('INSTA', 'https://www.instagram.com/bellelione')" class="link-button w-full bg-white text-gray-800 py-3 px-6 rounded-xl font-medium hover:shadow-lg flex items-center justify-between group ml-4">
-    <span>INSTA</span>
-    <svg class="w-4 h-4 text-purple-400 group-hover:text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
-    </svg>
-    </button>
 
     <button onclick="handleLinkClick('ASMR ROLEPLAY', 'https://www.youtube.com/@Bellaurasmr/videos')" class="link-button w-full bg-white text-gray-800 py-3 px-6 rounded-xl font-medium hover:shadow-lg flex items-center justify-between group ml-4">
     <span>ASMR ROLEPLAY</span>
@@ -321,32 +252,25 @@ Or just repeat your text within one span to make it longer! That's easier */
     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
     </svg>
     </button>
-    
-    </div>
-    </div>
 
-
-    
-
-    <!-- CONTACT Category -->
-    <div>
-
-    <button onclick="handleLinkClick('CONTACT | SHORT STORIES', 'https://auvue.info/contact')" class="link-button w-full bg-gradient-to-r from-purple-50 to-pink-50 hover:from-purple-100 hover:to-pink-100 border-2 border-purple-200 text-gray-800 py-4 px-6 rounded-2xl font-semibold hover:shadow-lg flex items-center justify-between group">
-    <span class="flex items-center gap-3">
-    <svg class="w-5 h-5 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
-    </svg>
-    CONTACT 
-    </span>
-    <svg class="w-5 h-5 text-purple-400 group-hover:text-purple-600 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <button onclick="handleLinkClick('RSS','https://rss.com/podcasts/gentle-heart')" class="link-button w-full bg-white text-gray-800 py-3 px-6 rounded-xl font-medium hover:shadow-lg flex items-center justify-between group ml-4">
+    <span>RSS PODCAST</span>
+    <svg class="w-4 h-4 text-purple-400 group-hover:text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
     </svg>
     </button>
 
-    </div>
+    <button onclick="handleLinkClick('INSTA', 'https://www.instagram.com/bellelione')" class="link-button w-full bg-white text-gray-800 py-3 px-6 rounded-xl font-medium hover:shadow-lg flex items-center justify-between group ml-4">
+    <span>INSTA</span>
+    <svg class="w-4 h-4 text-purple-400 group-hover:text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+    </svg>
+    </button>
     
+    </div>
+    </div>
 
-    <!-- Stores Category -->
+<!-- Stores Category -->
 
  <div>
 
@@ -368,28 +292,29 @@ Or just repeat your text within one span to make it longer! That's easier */
     
     
 
-    <!-- Stores Category -->
-
+    <!-- CONTACT Category -->
     <div>
 
-    <button onclick="handleLinkClick('stores', 'spicieintro.html')" class="w-full bg-gradient-to-r from-purple-50 to-pink-50 border-2 border-purple-200 text-gray-800 py-4 px-6 rounded-2xl font-semibold flex items-center justify-between">
+    <button onclick="handleLinkClick('CONTACT | SHORT STORIES', 'https://auvue.info/contact')" class="link-button w-full bg-gradient-to-r from-purple-50 to-pink-50 hover:from-purple-100 hover:to-pink-100 border-2 border-purple-200 text-gray-800 py-4 px-6 rounded-2xl font-semibold hover:shadow-lg flex items-center justify-between group">
     <span class="flex items-center gap-3">
     <svg class="w-5 h-5 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path>
+    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
     </svg>
-    SENSUAL DEMAND
+    CONTACT 
     </span>
     <svg class="w-5 h-5 text-purple-400 group-hover:text-purple-600 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
     </svg>
     </button>
+
+    </div>
+    
+
+   
+    
     
 
     
-    </div>
-
-    
-    </div>
     </br>
 
     <script>
